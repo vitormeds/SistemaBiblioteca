@@ -1,0 +1,36 @@
+CREATE TABLE livro (
+nome VARCHAR(50) NOT NULL,
+editora VARCHAR(50) NOT NULL,
+edicao VARCHAR(50) NOT NULL,
+autor VARCHAR(50) NOT NULL,
+categoria VARCHAR(50) NOT NULL,
+quantidade Int NOT NULL,
+codigo Int NOT NULL
+);
+
+CREATE TABLE editora (
+nome VARCHAR(50) NOT NULL,
+endereco VARCHAR(50) NOT NULL,
+telefone VARCHAR(50) NOT NULL,
+cnpj VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE usuario (
+nome VARCHAR(50) NOT NULL,
+senha VARCHAR(50) NOT NULL
+);
+
+INSERT INTO `usuario`(`nome`, `senha`) VALUES ('administrador','12345');
+
+CREATE TABLE emprestimo (
+cpf VARCHAR(50) NOT NULL,
+codlivro VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE aluno (
+nome VARCHAR(50) NOT NULL,
+cpf VARCHAR(50) NOT NULL,
+endereco VARCHAR(50) NOT NULL,
+telefone VARCHAR(50) NOT NULL
+);

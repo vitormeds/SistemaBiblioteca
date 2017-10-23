@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a6199ab2-35b4-47b4-bd20-b02faf2e4cbf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="28"/>
+	<queryString>
+		<![CDATA[select * from livro]]>
+	</queryString>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="editora" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edicao" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="autor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="categoria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantidade" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="221" splitType="Stretch">
+			<image>
+				<reportElement x="5" y="18" width="544" height="185" uuid="d8e7cc31-a41d-43e8-8dc7-9f27a54ec102"/>
+				<imageExpression><![CDATA["C:\\Users\\Vitor\\Google Drive\\Analise e Desenvolvimento de sistemas\\4 ° periodo\\Programação Orientada a Eventos\\2° Trabalho\\Biblioteca-TrabalhoPOE2\\src\\images\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="15" width="211" height="40" forecolor="#552827" uuid="a7c50e69-6248-4497-b83d-41189f13ef96"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Relatorio Livro]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="455" y="51" width="100" height="20" uuid="75c4498b-6095-425f-b238-ec8340000289"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="14" y="31" width="44" height="20" uuid="3eedc6dc-1203-459b-ace7-2026bdc8c04b"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="31" width="66" height="20" uuid="564c4942-508c-407a-ad48-440601b39d34"/>
+				<text><![CDATA[Editora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="189" y="31" width="51" height="20" uuid="1d707870-58d7-48ed-8d8b-081822653a57"/>
+				<text><![CDATA[Edição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="336" y="31" width="72" height="20" uuid="86ebb0f9-93de-45eb-b976-7aa2fdc1e518"/>
+				<text><![CDATA[Categoria]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="31" width="66" height="20" uuid="1af16df5-d2d8-4b52-9182-208d281a918d"/>
+				<text><![CDATA[Autor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="31" width="59" height="20" uuid="5ec4ec4f-230a-4b8b-958a-92d61dc9042e"/>
+				<text><![CDATA[Quantidade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="498" y="31" width="46" height="20" uuid="502d8c4b-72d6-4a20-b3f7-d61618c3b171"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="19" width="76" height="20" uuid="460d5a11-1eee-4cd9-b135-2df79a33ce47"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="106" y="19" width="66" height="20" uuid="490b4323-90a5-49f4-8010-c681d4874d9e"/>
+				<textFieldExpression><![CDATA[$F{editora}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="19" width="55" height="20" uuid="6b3c341c-b9d4-459a-bcbd-564dccffde4b"/>
+				<textFieldExpression><![CDATA[$F{edicao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="19" width="66" height="20" uuid="8bea9448-4331-423f-b194-9bb9ebb749ea"/>
+				<textFieldExpression><![CDATA[$F{autor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="19" width="72" height="20" uuid="4a93162f-c4f8-410d-b881-7a57056aa09b"/>
+				<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="19" width="59" height="20" uuid="3c01f2d9-62fd-4809-9422-47d43f75e0ac"/>
+				<textFieldExpression><![CDATA[$F{quantidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="498" y="19" width="46" height="20" uuid="3491b17c-1ea0-4031-883f-9bdcb23a1fab"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="429" y="34" width="80" height="20" uuid="115c5d42-f2a6-4cbf-aa6b-389a7ae2125b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="509" y="34" width="40" height="20" uuid="98cc2bbd-30bf-4b53-9bb6-34a2c562c6d8"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

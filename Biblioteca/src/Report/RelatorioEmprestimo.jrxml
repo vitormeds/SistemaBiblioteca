@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f0995824-21f5-46af-af51-a4785f77b60a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from emprestimo]]>
+	</queryString>
+	<field name="cpf" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codlivro" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="222" splitType="Stretch">
+			<image>
+				<reportElement x="6" y="17" width="543" height="188" uuid="e31f9228-3380-455c-a2a3-2a883a85b848"/>
+				<imageExpression><![CDATA["C:\\Users\\Vitor\\Google Drive\\Analise e Desenvolvimento de sistemas\\4 ° periodo\\Programação Orientada a Eventos\\2° Trabalho\\Biblioteca-TrabalhoPOE2\\src\\images\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="127" y="12" width="300" height="59" forecolor="#552827" uuid="e72f8f60-0277-41fd-ba41-cdb945067f7b"/>
+				<textElement>
+					<font size="30"/>
+				</textElement>
+				<text><![CDATA[Relatorio Emprestimo]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="455" y="63" width="100" height="20" uuid="242c2854-2bf3-47d1-905e-cd33deb040d7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="111" y="21" width="100" height="20" uuid="fb42e3c6-71f0-4405-b776-ea037a1ee0fd"/>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="21" width="100" height="20" uuid="bcd0c9f6-58b1-4be0-a657-d8ec07fe18e7"/>
+				<text><![CDATA[Codigo do Livro]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="111" y="24" width="100" height="20" uuid="2aeca796-1a79-40a9-8f36-9421ec8cb197"/>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="24" width="100" height="20" uuid="3bdb2184-d7aa-404d-8662-d28e444a5eeb"/>
+				<textFieldExpression><![CDATA[$F{codlivro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="429" y="34" width="80" height="20" uuid="73a059d8-d9e3-480f-8c60-7f88f208361c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="509" y="34" width="40" height="20" uuid="e97bbb9a-a95a-4fd6-819d-a7792d88d8af"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
