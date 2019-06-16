@@ -9,7 +9,7 @@ package model;
  *
  * @author Vitor
  */
-public class Editora
+public class LivroDAO
 {
     
 }
